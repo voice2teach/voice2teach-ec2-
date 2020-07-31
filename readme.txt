@@ -1,0 +1,6 @@
+DB_CONNECTION=sqlsrv
+DB_HOST=localhost
+DB_PORT=null
+DB_DATABASE=LaraVoiceDB
+DB_USERNAME=test
+DB_PASSWORD=test
