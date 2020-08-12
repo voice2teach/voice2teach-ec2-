@@ -1,0 +1,12 @@
+{
+    "listenAtStart": false,
+    "prodMode": false,
+    "namesColumnIndex": 0,
+    "gradesColumnIndex": 1,
+    "rowNumberWhereNameStarts": 2,
+    "matchThreshold": 0.7,
+    "cutoffThreshold": 0.2,
+    "lowestMark": 0,
+    "highestMark": 100,
+    "nameOfTheFileToDownload": "Grades"
+}

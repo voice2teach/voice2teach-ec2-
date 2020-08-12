@@ -1,0 +1,452 @@
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    line-height: 50px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: cornflowerblue;
+    box-shadow: 3px 3px 3px #5b5c5f;
+    position: relative;
+}
+
+header a {
+    color: white;
+}
+
+img#logo {
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    left: 20px;
+    position: absolute;
+}
+
+#info {
+    font-size: 20px;
+    text-align: center;
+    color: #777;
+    visibility: hidden;
+    position: relative;
+}
+
+#results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 50px;
+}
+
+div#main {
+    padding: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    min-height: calc(100% - 130px);
+    /* background-image: url('./assets/page.png');
+    background-repeat: no-repeat ;
+    background-size: cover; */
+}
+
+div#noFileSelected {
+    top: 100px;
+    width: 600px;
+    height: 200px;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-left: calc(50% - 300px);
+    box-shadow: 5px 5px 5px #323335;
+    background-color: #6c6d70;
+    color: #000;
+    text-align: center;
+    border: 1px solid #acaeb3;
+    background-image: url("../../assets/img/page.png");
+    /* background-repeat: no-repeat ; */
+    background-size: contain;
+}
+
+div#noFileSelected i {
+    margin-top: 100px;
+    font-family: fantasy;
+}
+
+div#loading_screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+
+div#loading_screen img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -106px;
+}
+
+div#loading_screen h4 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -106px;
+}
+
+div#tableContainer {
+    display: none;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    /* min-height: 300px; */
+    text-align: center;
+    /* background-color: #f3f3f3; */
+    box-shadow: 5px 5px 5px #5b5c5f;
+}
+
+div#tableContainer>table {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+div#myDropdown a {
+    cursor: pointer;
+}
+
+th {
+    border-style: groove;
+    padding: 2.5px 0;
+    font-size: 2vh;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+table {
+    border-collapse: separate!important;
+    border-spacing: 2px;
+}
+
+tr.matchedRow {
+    background-color: #8aa7e2;
+}
+
+td {
+    border-style: groove;
+    font-size: 2vh;
+    color: #4c4d50;
+}
+
+td.g_data {
+    width: 100px;
+}
+
+input.editCell {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: none;
+}
+
+div#actionbar {
+    margin: 0px 10px 10px 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(189, 184, 184);
+    border-radius: 25px;
+    /* overflow: auto; */
+}
+
+.clearfix {
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+input#file_input {
+    float: left;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+input#file_input.FileSelected {
+    background-color: green;
+}
+
+button#record_button {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+button.savebtn {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #337ab7;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+button.recording {
+    background-color: crimson!important;
+}
+
+button#download_button {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+.icon-bar {
+    background-color: white;
+}
+
+footer {
+    background-color: cornflowerblue;
+    color: #fff;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+div#conflict_window {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+div#conflict_window>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div#selection_box {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+div#selection_box>b {
+    margin: 10px 0;
+    color: #000;
+    font-size: 3.5vh;
+}
+
+div#selection_box>button {
+    position: absolute;
+    padding: 5px 20px;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+div#choices_container {
+    text-align: left;
+    color: white;
+}
+
+div#choices_container>span {
+    padding: 5px 20px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 3vh;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+    border-radius: 20px;
+    float: left;
+}
+
+.StandardFont {
+    /* font-size: 2vh; */
+}
+
+button#hidden_span {
+    border: none;
+    background-color: rgba(1, 1, 1, 0);
+    padding: 0.5vh 0;
+    color: rgba(1, 1, 1, 0);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 35px;
+    height: 30px;
+    background: #000;
+    /* color: #black; */
+    cursor: pointer;
+    border: 0;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.8);
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.modalview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 300px;
+    margin-left: -200px;
+    margin-top: -150px;
+    background: #bdc3c7;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-out;
+    transform: translateY(45px);
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.active+.modalview {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-body {
+    padding: 60px 70px;
+    text-align: center;
+}
+
+.Fuzzy_Name {
+    display: none;
+}
+
+.Fuzzy_Name_th {
+    display: none;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.record-fuzzy-name {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.start-fuzzy-name-record {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+.save-fuzzy-name-record {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-size: 1em;
+    border-radius: 20px;
+    display: none;
+}
+
+.dropbtn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    background-color: chocolate;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #9e4201;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 140px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
